@@ -1,0 +1,54 @@
+user{
+    name,
+    email,
+    password,
+    phone,
+    address,
+    profilePhoto,
+    likes we have done,
+    following
+
+}
+food{
+    name,
+    description,
+    price,
+    veg/non-veg,
+    image,
+    cuisine type,
+    likes,
+    categories: starter,bevarages,...
+
+}
+restautants model me {
+    id,
+    name,
+    email,
+    phone,
+    password,
+    address,
+    image,
+
+    night me chalu h y anhi ,
+    dineout,
+    location,
+    delivery available or not,
+    res. image,
+    veg/non-veg,
+    cuisine,
+    rating,
+    followers,
+    totalIncome,
+    totalViews,
+    
+    
+
+}
+register ke baad login na karna pade 
+partner login karne ke baad me login user pe direct ho raha hu, login hi nhi kar pa raha partner ko 
+place order ke baad 5 ssec me order delivered aayega and then rating form
+imagekit hata ke direct video link db me uplad karna hai 
+on rating form after done with rating show a popup msg that rating is done and then redirect to user/home in 1-2 sec dont display that res.send messgae from browser
+2.75 + 55 jecrc university
+2.25 + 40 poornima
+1 + 50 jecrc foundation
