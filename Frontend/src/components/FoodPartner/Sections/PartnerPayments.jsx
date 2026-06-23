@@ -9,7 +9,7 @@ const PartnerPayments = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/food/payments', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         const data = await response.json();

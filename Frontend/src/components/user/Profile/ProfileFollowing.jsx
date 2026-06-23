@@ -13,7 +13,7 @@ const ProfileFollowing = () => {
     const fetchFollowing = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/api/user/following', {
+        const response = await fetch('', {
           credentials: 'include'
         });
 
@@ -33,7 +33,7 @@ const ProfileFollowing = () => {
 
   const handleUnfollow = async (restaurantId) => {
     try {
-      const response = await fetch('http://localhost:3000/api/user/follow-restaurant', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

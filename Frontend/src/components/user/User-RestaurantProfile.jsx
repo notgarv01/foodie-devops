@@ -90,7 +90,7 @@ const UserRestaurantProfile = () => {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/user/cart', { credentials: 'include' });
+        const response = await fetch('', { credentials: 'include' });
         if (response.ok) {
           const data = await response.json();
           const cartItems = data.cart || [];
@@ -108,7 +108,7 @@ const UserRestaurantProfile = () => {
   useEffect(() => {
     const fetchUserState = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/user/profile', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         
@@ -148,7 +148,7 @@ const UserRestaurantProfile = () => {
 
     // Save to backend
     try {
-      const response = await fetch('http://localhost:3000/api/user/add-to-cart', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -175,7 +175,7 @@ const UserRestaurantProfile = () => {
 
     // Remove from backend
     try {
-      const response = await fetch('http://localhost:3000/api/user/remove-from-cart', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -262,7 +262,7 @@ const UserRestaurantProfile = () => {
                 setFollowLoading(true);
                 try {
                   const restaurantId = restaurantData?.id || restaurantData?._id;
-                  const response = await fetch('http://localhost:3000/api/user/follow-restaurant', {
+                  const response = await fetch('', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
@@ -303,7 +303,7 @@ const UserRestaurantProfile = () => {
                 setFavouriteLoading(true);
                 try {
                   const restaurantId = restaurantData?.id || restaurantData?._id;
-                  const response = await fetch('http://localhost:3000/api/user/favorite-restaurant', {
+                  const response = await fetch('', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',

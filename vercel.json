@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "buildCommand": "cd Frontend && npm install && npm run build && cd ../api && npm install",
+  "installCommand": "cd Frontend && npm install && cd ../Backend && npm install",
+  "outputDirectory": "Frontend/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

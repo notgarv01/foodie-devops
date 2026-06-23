@@ -12,7 +12,7 @@ const ProfileFavorites = () => {
     const fetchFavorites = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/api/user/favorites', {
+        const response = await fetch('', {
           credentials: 'include'
         });
 

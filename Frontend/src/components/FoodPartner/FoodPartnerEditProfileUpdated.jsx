@@ -44,7 +44,7 @@ const FoodPartnerEditProfile = () => {
     const fetchProfileData = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:3000/api/food/profile", {
+        const response = await fetch('', {
           credentials: "include",
         });
 
@@ -154,7 +154,7 @@ const FoodPartnerEditProfile = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3000/api/food/profile", {
+      const response = await fetch('', {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

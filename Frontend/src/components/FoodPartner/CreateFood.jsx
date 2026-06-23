@@ -94,7 +94,7 @@ const CreateFood = () => {
         payload.append("videoFile", formData.videoFile);
       }
 
-      const response = await fetch("http://localhost:3000/api/food/create", {
+      const response = await fetch('', {
         method: "POST",
         credentials: "include", // Include cookies for authentication
         body: payload,

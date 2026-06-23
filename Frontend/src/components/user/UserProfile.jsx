@@ -13,7 +13,7 @@ const UserProfile = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/auth/user/logout', {
+      const response = await fetch('', {
         method: 'POST',
         credentials: 'include'
       });

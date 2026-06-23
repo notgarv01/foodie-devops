@@ -10,7 +10,7 @@ const MenuManagement = () => {
   useEffect(() => {
     const fetchMenuData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/food/dashboard', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         const data = await response.json();

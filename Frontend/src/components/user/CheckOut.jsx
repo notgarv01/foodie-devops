@@ -32,7 +32,7 @@ const Checkout = () => {
         return;
       }
       try {
-        const response = await fetch('http://localhost:3000/api/user/cart', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         if (response.ok) {
@@ -63,7 +63,7 @@ const Checkout = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/user/profile', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         
@@ -232,7 +232,7 @@ const Checkout = () => {
                       paymentMethod: paymentMethod.toUpperCase() 
                     };
 
-                    const orderResponse = await fetch('http://localhost:3000/api/user/orders', {
+                    const orderResponse = await fetch('', {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       credentials: 'include',
@@ -242,12 +242,12 @@ const Checkout = () => {
                     const result = await orderResponse.json();
                     
                     if (orderResponse.ok) {
-                      await fetch('http://localhost:3000/api/user/update-stats', {
+                      await fetch('', {
                         method: 'POST',
                         credentials: 'include'
                       });
                       
-                      await fetch('http://localhost:3000/api/user/clear-cart', {
+                      await fetch('', {
                         method: 'POST',
                         credentials: 'include'
                       });

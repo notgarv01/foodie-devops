@@ -43,7 +43,7 @@ const SalesView = () => {
         setError("");
         
         // Use existing dashboard endpoint since sales endpoint doesn't exist
-        const response = await fetch('http://localhost:3000/api/food/dashboard', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         

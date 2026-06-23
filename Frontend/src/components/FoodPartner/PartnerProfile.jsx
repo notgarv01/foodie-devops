@@ -16,7 +16,7 @@ const PartnerProfile = () => {
     useEffect(() => {
         const fetchPartner = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/food/profile', {
+                const res = await fetch('', {
                     credentials: 'include'
                 });
                 const data = await res.json();

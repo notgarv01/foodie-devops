@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
     const checkAuthStatus = async () => {
       try {
         // First try user authentication
-        const userResponse = await fetch('http://localhost:3000/api/user/profile', {
+        const userResponse = await fetch('', {
           credentials: 'include'
         });
         
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
         }
 
         // If user auth fails, try partner authentication
-        const partnerResponse = await fetch('http://localhost:3000/api/food/profile', {
+        const partnerResponse = await fetch('', {
           credentials: 'include'
         });
         
@@ -80,8 +80,8 @@ export const AuthProvider = ({ children }) => {
     // Call appropriate backend logout based on user type
     try {
       const logoutEndpoint = userType === 'partner' 
-        ? 'http://localhost:3000/api/auth/food-partner/logout'
-        : 'http://localhost:3000/api/auth/user/logout';
+        ? ''
+        : '';
       
       await fetch(logoutEndpoint, {
         method: 'POST',

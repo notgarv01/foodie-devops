@@ -40,7 +40,7 @@ const FoodPartnerRegister = () => {
     setFieldErrors({ email: '', restaurantName: '' });
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/food-partner/register', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

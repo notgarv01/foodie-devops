@@ -14,7 +14,7 @@ const VideosView = () => {
         // Add a small delay to avoid rapid requests
         await new Promise(resolve => setTimeout(resolve, 500));
         
-        const response = await fetch('http://localhost:3000/api/food/videos', {
+        const response = await fetch('', {
           method: 'GET',
           credentials: 'include'
         });

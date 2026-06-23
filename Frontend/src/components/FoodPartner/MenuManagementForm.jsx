@@ -105,7 +105,7 @@ const MenuManagementForm = () => {
     try {
       const url = isEditMode 
         ? `http://localhost:3000/api/food/${foodId}`
-        : 'http://localhost:3000/api/food/create';
+        : '';
       
       const method = isEditMode ? 'PUT' : 'POST';
 

@@ -16,7 +16,7 @@ const UserCart = ({ onCheckout }) => {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/user/cart', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         
@@ -57,7 +57,7 @@ const UserCart = ({ onCheckout }) => {
     setItems(items.map(item => item.id === id ? { ...item, qty: newQty } : item));
     
     try {
-      await fetch('http://localhost:3000/api/user/update-cart', {
+      await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -71,7 +71,7 @@ const UserCart = ({ onCheckout }) => {
     if (!itemToRemove) return;
     
     try {
-      const response = await fetch('http://localhost:3000/api/user/remove-from-cart', {
+      const response = await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

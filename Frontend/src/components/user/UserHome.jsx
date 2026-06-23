@@ -34,7 +34,7 @@ const UserHome = () => {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/food/restaurants');
+        const response = await fetch('');
         const data = await response.json();
         if (response.ok) {
           const transformed = data.restaurants.map((res, index) => ({
@@ -58,13 +58,13 @@ const UserHome = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const profileRes = await fetch('http://localhost:3000/api/user/profile', { credentials: 'include' });
+        const profileRes = await fetch('', { credentials: 'include' });
         if (profileRes.ok) {
           const data = await profileRes.json();
           setUserData(data.user);
           setFavorites(data.user.favorites || []);
         }
-        const cartRes = await fetch('http://localhost:3000/api/user/cart', { credentials: 'include' });
+        const cartRes = await fetch('', { credentials: 'include' });
         if (cartRes.ok) {
           const data = await cartRes.json();
           setCartCount(data.cart?.reduce((sum, item) => sum + (item.quantity || 1), 0) || 0);
@@ -123,7 +123,7 @@ const UserHome = () => {
     e.stopPropagation();
     setFavoriteLoading(prev => ({ ...prev, [restaurantId]: true }));
     try {
-      const response = await fetch('http://localhost:3000/api/user/favorite-restaurant', {
+      const response = await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -140,7 +140,7 @@ const UserHome = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/auth/user/logout', {
+      const response = await fetch('', {
         method: 'POST',
         credentials: 'include'
       });

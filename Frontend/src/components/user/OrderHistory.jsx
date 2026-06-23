@@ -11,7 +11,7 @@ const OrderHistory = () => {
     const fetchOrders = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/api/user/orders', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         

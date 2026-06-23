@@ -42,7 +42,7 @@ const FoodVideoReels = () => {
     const fetchFoodVideos = async () => {
       try {
         const userId = getUserId();
-        const response = await fetch('http://localhost:3000/api/user/food-videos', {
+        const response = await fetch('', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -173,7 +173,7 @@ const ReelItem = ({ video, isMuted, setIsMuted }) => {
       };
       
       // API call to update likes in database
-      const response = await fetch('http://localhost:3000/api/user/update-likes', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -217,7 +217,7 @@ const ReelItem = ({ video, isMuted, setIsMuted }) => {
       
       if (isInCart) {
         // Remove from cart
-        response = await fetch('http://localhost:3000/api/user/remove-from-cart', {
+        response = await fetch('', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -230,7 +230,7 @@ const ReelItem = ({ video, isMuted, setIsMuted }) => {
         action = 'remove';
       } else {
         // Add to cart
-        response = await fetch('http://localhost:3000/api/user/add-to-cart', {
+        response = await fetch('', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -317,7 +317,7 @@ const ReelItem = ({ video, isMuted, setIsMuted }) => {
       };
       
       // API call to follow/unfollow restaurant
-      const response = await fetch('http://localhost:3000/api/user/follow-restaurant', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

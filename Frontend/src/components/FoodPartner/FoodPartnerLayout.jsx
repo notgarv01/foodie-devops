@@ -17,7 +17,7 @@ const FoodPartnerLayout = () => {
   useEffect(() => {
     const fetchRestaurantName = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/food/profile', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         
@@ -38,7 +38,7 @@ const FoodPartnerLayout = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/auth/food-partner/logout', {
+      const response = await fetch('', {
         method: 'POST',
         credentials: 'include'
       });

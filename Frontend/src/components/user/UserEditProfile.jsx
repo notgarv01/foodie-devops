@@ -25,7 +25,7 @@ const UserEditProfile = () => {
     const fetchUserData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/api/user/profile', {
+        const response = await fetch('', {
           credentials: 'include'
         });
         
@@ -127,7 +127,7 @@ const UserEditProfile = () => {
       // Profile photos are uploaded separately via uploadToBackend function
       const { profilePhoto, ...profileData } = formData;
       
-      const response = await fetch('http://localhost:3000/api/user/update-profile', {
+      const response = await fetch('', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

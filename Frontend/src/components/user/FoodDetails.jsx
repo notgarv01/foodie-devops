@@ -70,12 +70,12 @@ const FoodDetails = () => {
 
   const fetchUserData = async () => {
     try {
-      const profileRes = await fetch('http://localhost:3000/api/user/profile', { credentials: 'include' });
+      const profileRes = await fetch('', { credentials: 'include' });
       if (profileRes.ok) {
         const data = await profileRes.json();
         setFavorites(data.user.favorites || []);
       }
-      const cartRes = await fetch('http://localhost:3000/api/user/cart', { credentials: 'include' });
+      const cartRes = await fetch('', { credentials: 'include' });
       if (cartRes.ok) {
         const data = await cartRes.json();
         setCartCount(data.cart?.reduce((sum, item) => sum + (item.quantity || 1), 0) || 0);
@@ -87,7 +87,7 @@ const FoodDetails = () => {
 
   const handleAddToCart = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/user/add-to-cart', {
+      const response = await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -110,7 +110,7 @@ const FoodDetails = () => {
     if (!restaurant) return;
     
     try {
-      const response = await fetch('http://localhost:3000/api/user/favorite-restaurant', {
+      const response = await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
